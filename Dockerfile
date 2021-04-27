@@ -1,9 +1,9 @@
-FROM adoptopenjdk:11-jre-openj9 as builder
+FROM adoptopenjdk:11-jdk-openj9 as builder
 
 WORKDIR /build
 ADD . /build/
 
-RUN ./gradlew
+RUN ./gradlew build
 
 FROM adoptopenjdk:11-jre-openj9
 
